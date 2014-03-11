@@ -1,0 +1,37 @@
+# be 8 bit clean
+set input-meta on
+set output-meta on
+set convert-meta off
+
+#stop flashing so much
+set bell-style none
+
+#complete opts
+set completion-ignore-case on
+set show-all-if-ambiguous on
+set show-all-if-unmodified on
+#* / @ for exe, dir, sockets
+set visible-stats on
+#dont show . files when autocomplete
+set match-hidden-files off
+#show / for symlinked dirs
+set mark-symlinked-directories On
+
+#bash 4 complete opts
+#fixes tab complete when cursor isn't at the end of a word
+set skip-completed-text on
+
+#readline opt - treat _ and - as the same when tab completing
+set completion-map-case on
+
+#auto expand ! commands
+$if Bash
+      Space: magic-space
+$endif
+
+# Use the text that has already been typed as the prefix for searching through
+# # commands (i.e. more intelligent Up/Down behavior)
+# "\e[B": history-search-forward
+# "\e[A": history-search-backward
+
+set blink-matching-paren on
